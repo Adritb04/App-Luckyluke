@@ -1,0 +1,67 @@
+---
+const currentPath = Astro.url.pathname;
+
+interface NavItem {
+	id: string;
+	label: string;
+	icon: string;
+	href: string;
+}
+
+const navItems: NavItem[] = [
+	{
+		id: 'principales',
+		label: 'Principales',
+		icon: '🍔',
+		href: '/'
+	},
+	{
+		id: 'compartir',
+		label: 'Compartir',
+		icon: '🍟',
+		href: '/picoteo'
+	},
+	{
+		id: 'bebidas',
+		label: 'Bebidas',
+		icon: '🍺',
+		href: '/bebidas'
+	},
+	{
+		id: 'postres',
+		label: 'Postres',
+		icon: '🍰',
+		href: '/postres'
+	}
+];
+---
+
+<nav class="fixed bottom-0 left-0 right-0 bg-black/95 backdrop-blur-md border-t border-red-600/30 z-50 lg:hidden" transition:persist>
+	<div class="flex items-center justify-around h-16 px-2">
+		{navItems.map((item) => (
+			<a
+				href={item.href}
+				class:list={[
+					"flex flex-col items-center justify-center flex-1 py-2 px-1 transition-all duration-200",
+					currentPath === item.href 
+						? "text-red-600 scale-110" 
+						: "text-gray-400 hover:text-red-500"
+				]}
+			>
+				<span class="text-2xl mb-1">{item.icon}</span>
+				<span class="text-[10px] font-bratton uppercase tracking-wider">{item.label}</span>
+			</a>
+		))}
+	</div>
+</nav>
+
+<style>
+	nav a {
+		-webkit-tap-highlight-color: transparent;
+		user-select: none;
+	}
+	
+	nav a.active {
+		transform: translateY(-4px);
+	}
+</style>

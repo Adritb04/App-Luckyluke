@@ -1,0 +1,94 @@
+---
+interface Price {
+	label: string;
+	price: string;
+}
+
+interface Props {
+	name: string;
+	image?: string;
+	description?: string;
+	prices: Price[];
+	abv?: string;
+	ibu?: string;
+	style?: string;
+	country?: string;
+	color?: string;
+	pairing?: string;
+}
+
+const { name, image, description = 'Disponible en barril. Pregunta al personal por detalles.', prices, abv, ibu, style, country, color, pairing } = Astro.props;
+---
+
+<article class="border border-white/15 bg-black/40 rounded-xl overflow-hidden hover:border-red-600/50 transition-all duration-300">
+	<div class="flex flex-col md:flex-row gap-4 p-4">
+		<!-- Imagen -->
+		{image && (
+			<div class="w-full md:w-32 h-32 shrink-0 rounded-lg overflow-hidden bg-black/60">
+				<img 
+					src={image} 
+					alt={name} 
+					class="w-full h-full object-cover" 
+					loading="lazy"
+					onerror="this.style.display='none'; this.parentElement.classList.add('bg-black/60');"
+				/>
+			</div>
+		)}
+		
+		<!-- Contenido -->
+		<div class="flex-1 min-w-0">
+			<h3 class="text-lg font-bold text-red-500 mb-2">{name}</h3>
+			
+			<p class="text-sm text-white/80 mb-3 leading-relaxed">
+				{description}
+			</p>
+			
+			<!-- Chips de info -->
+			<div class="flex flex-wrap gap-2 mb-3">
+				{abv && (
+					<span class="px-2 py-1 text-xs rounded-full border border-white/10 bg-black/40 text-white/80">
+						ABV: {abv}
+					</span>
+				)}
+				{ibu && (
+					<span class="px-2 py-1 text-xs rounded-full border border-white/10 bg-black/40 text-white/80">
+						IBU: {ibu}
+					</span>
+				)}
+				{color && (
+					<span class="px-2 py-1 text-xs rounded-full border border-white/10 bg-black/40 text-white/80">
+						{color}
+					</span>
+				)}
+				{style && (
+					<span class="px-2 py-1 text-xs rounded-full border border-white/10 bg-black/40 text-white/80">
+						{style}
+					</span>
+				)}
+				{country && (
+					<span class="px-2 py-1 text-xs rounded-full border border-white/10 bg-black/40 text-white/80">
+						{country}
+					</span>
+				)}
+			</div>
+			
+			<!-- Maridaje -->
+			{pairing && (
+				<div class="mb-3 p-3 rounded-lg border border-red-600/20 bg-red-950/20">
+					<div class="text-xs font-bold text-red-400 tracking-wide mb-1">🍷 MARIDAJE</div>
+					<p class="text-sm text-white/85 leading-relaxed">{pairing}</p>
+				</div>
+			)}
+			
+			<!-- Precios -->
+			<div class="rounded-lg border border-white/10 bg-black/35 overflow-hidden">
+				{prices.map((p, i) => (
+					<div class={`flex items-center justify-between px-3 py-2 ${i !== prices.length - 1 ? 'border-b border-white/5' : ''}`}>
+						<span class="text-xs text-white/70 font-bratton">{p.label}</span>
+						<span class="font-bold text-sm text-white">{p.price}</span>
+					</div>
+				))}
+			</div>
+		</div>
+	</div>
+</article>

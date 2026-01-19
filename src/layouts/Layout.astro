@@ -1,0 +1,112 @@
+---
+import '../styles/global.css';
+import { ViewTransitions } from 'astro:transitions';
+
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const { 
+	title = "Lucky Luke - Restaurante",
+	description = "Carta del Restaurante Lucky Luke"
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+		
+		<!-- Swiper CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+		
+		<!-- AOS CSS -->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		
+		<!-- PWA Meta -->
+		<meta name="apple-mobile-web-app-title" content="Carta LuckyLuke">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		
+		<ViewTransitions />
+		<meta name="generator" content={Astro.generator} />
+	</head>
+	<body class="bg-black text-white font-bratton">
+		<slot />
+		
+		<!-- Scripts -->
+		<script src="https://unpkg.com/feather-icons"></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		
+		<!-- Initialize -->
+		<script is:inline>
+			// Feather icons
+			if (typeof feather !== 'undefined') {
+				feather.replace();
+			}
+			
+			// AOS
+			if (typeof AOS !== 'undefined') {
+				AOS.init({
+					duration: 800,
+					once: true,
+					offset: 100
+				});
+			}
+		</script>
+	</body>
+</html>
+
+<style is:global>
+	/* Tipografías corporativas */
+	@font-face {
+		font-family: 'Burford';
+		src: url('/fonts/Burford.woff2') format('woff2');
+		font-weight: normal;
+		font-style: normal;
+	}
+	
+	@font-face {
+		font-family: 'Bratton';
+		src: url('/fonts/Bratton.woff2') format('woff2');
+		font-weight: normal;
+		font-style: normal;
+	}
+	
+	.font-burford { 
+		font-family: 'Burford', 'Bebas Neue', sans-serif; 
+	}
+	
+	.font-bratton { 
+		font-family: 'Bratton', 'Roboto', sans-serif; 
+	}
+	
+	/* Border western style */
+	.border-western {
+		border: 2px solid rgba(206, 19, 23, 0.5);
+		border-radius: 8px;
+	}
+	
+	.border-western:hover {
+		border-color: rgba(206, 19, 23, 0.8);
+	}
+	
+	/* Menu category */
+	.menu-category {
+		border-left: 4px solid #CE1317;
+		background: rgba(206, 19, 23, 0.1);
+	}
+</style>

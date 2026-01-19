@@ -1,0 +1,139 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import BottomNavigation from '../components/BottomNavigation.astro';
+import Sidebar from '../components/Sidebar.astro';
+import MenuSection from '../components/MenuSection.astro';
+import MenuItem from '../components/MenuItem.astro';
+import FeaturedCard from '../components/FeaturedCard.astro';
+---
+
+<Layout title="Principales - Lucky Luke">
+	<Navigation />
+	<Sidebar />
+	
+	<main class="pt-28 md:pt-32 px-4 pb-24 md:pb-20 lg:pl-64">
+		<section class="py-16 bg-black mb-20">
+			<div class="container mx-auto px-4">
+				
+				<!-- Burgers de Navidad -->
+				<div id="navidad" class="mb-20">
+					<div class="flex items-center mb-8">
+						<div class="flex-1 h-px bg-gray-700"></div>
+						<h2 class="font-burford text-4xl mx-4 text-red-600 text-center">BURGERS DE NAVIDAD</h2>
+						<div class="flex-1 h-px bg-gray-700"></div>
+					</div>
+					
+					<div class="grid grid-cols-2 gap-4 md:gap-6">
+						<FeaturedCard 
+							name="Sweety Santa"
+							price="13,90 €"
+							description="Brioche rojo artesanal, mayonesa de trufa, smash fino con gouda fundido, mermelada de bacon y cebolla pochada. Doble capa y garrapiñado picado."
+							image="https://huggingface.co/spaces/restauranteluckyluke/restauranteluckyluke/resolve/main/images/SWEETSANTA.jpeg"
+							emoji="🎅🏻"
+							color="text-red-600"
+						/>
+						<FeaturedCard 
+							name="Ginger Grinch"
+							price="13,90 €"
+							description="Brioche verde artesanal, mayo japonesa, pollo crujiente, cheddar y Monterey Jack, bacon ahumado, cebolla caramelizada y Lotus picado por encima"
+							image="https://huggingface.co/spaces/restauranteluckyluke/restauranteluckyluke/resolve/main/images/GINGERGRINCH.jpeg"
+							emoji="🎄"
+							color="text-green-600"
+						/>
+					</div>
+				</div>
+
+				<!-- Burgers -->
+				<MenuSection 
+					id="burgers" 
+					title="BURGERS"
+					description="Sólo la mejor carne puede traer estas burgers. Hechas en parrilla, con pan brioche casero y acompañadas de patatas."
+				>
+					<div class="col-span-full mb-4">
+						<p class="font-bratton text-sm text-gray-400 text-center mb-3">
+							TODAS ESTAS BURGERS CONTIENEN:
+						</p>
+						<div class="flex flex-wrap justify-center gap-2">
+							<span class="bg-red-700 text-white text-xs px-2 py-1 rounded">Gluten</span>
+							<span class="bg-yellow-700 text-white text-xs px-2 py-1 rounded">Huevo</span>
+							<span class="bg-green-600 text-white text-xs px-2 py-1 rounded">Lácteos</span>
+							<span class="bg-blue-600 text-white text-xs px-2 py-1 rounded">Soja</span>
+							<span class="bg-stone-700 text-white text-xs px-2 py-1 rounded">Sésamo</span>
+							<span class="bg-gray-600 text-white text-xs px-2 py-1 rounded">Sulfitos</span>
+							<span class="bg-amber-600 text-white text-xs px-2 py-1 rounded">Mostaza</span>
+						</div>
+					</div>
+					
+					<MenuItem 
+						name="CLASSIC BURGER"
+						price="11,90€"
+						description="180gr de carne de ternera, lechuga, tomate, queso cheddar y salsa burger."
+					/>
+					<MenuItem 
+						name="BACON CHEESE BURGER"
+						price="12,90€"
+						description="180gr de carne de ternera, bacon crujiente, doble queso cheddar y salsa BBQ."
+					/>
+					<MenuItem 
+						name="BLUE CHEESE BURGER"
+						price="13,90€"
+						description="180gr de carne de ternera, queso azul, cebolla caramelizada y rúcula."
+					/>
+					<MenuItem 
+						name="PULLED PORK BURGER"
+						price="14,90€"
+						description="180gr de carne de ternera, pulled pork, queso cheddar, aros de cebolla y salsa BBQ."
+					/>
+				</MenuSection>
+
+				<!-- Carnes -->
+				<MenuSection 
+					id="carnes" 
+					title="CARNES"
+				>
+					<MenuItem 
+						name="COSTILLAS BBQ"
+						price="16,90€"
+						description="Costillas de cerdo a baja temperatura con salsa BBQ casera. Acompañadas de patatas fritas."
+						allergens={['Gluten', 'Soja', 'Sulfitos', 'Mostaza']}
+					/>
+					<MenuItem 
+						name="ENTRECOT"
+						price="18,90€"
+						description="300gr de entrecot de ternera a la parrilla. Acompañado de patatas o ensalada."
+						allergens={['Sulfitos']}
+					/>
+				</MenuSection>
+
+				<!-- Mexicano -->
+				<MenuSection 
+					id="mexicano" 
+					title="MEXICANO"
+				>
+					<MenuItem 
+						name="TACOS AL PASTOR"
+						price="11,90€"
+						description="3 tacos de carne al pastor con piña, cilantro y cebolla."
+						allergens={['Gluten', 'Soja', 'Sulfitos']}
+					/>
+					<MenuItem 
+						name="QUESADILLAS"
+						price="10,90€"
+						description="Tortilla de harina con mezcla de quesos, pollo y pico de gallo."
+						allergens={['Gluten', 'Lácteos', 'Sulfitos']}
+					/>
+					<MenuItem 
+						name="BURRITO BOWL"
+						price="12,90€"
+						description="Base de arroz, alubias negras, carne mechada, pico de gallo, guacamole y crema agria."
+						allergens={['Lácteos', 'Sulfitos', 'Soja']}
+					/>
+				</MenuSection>
+				
+			</div>
+		</section>
+	</main>
+	
+	<BottomNavigation />
+</Layout>

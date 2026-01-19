@@ -1,0 +1,14 @@
+[
+  { "name": "Coca-Cola Vainilla", "price": "2,70€" },
+  { "name": "Aquarius Melocotón", "price": "2,70€" },
+  { "name": "Fuze Tea Mango Piña", "price": "2,70€" },
+  { "name": "Fuze Tea Limón", "price": "2,70€" },
+  { "name": "Coca-Cola Zero", "price": "2,70€" },
+  { "name": "Coca-Cola", "price": "2,70€" },
+  { "name": "Fanta Naranja", "price": "2,70€" },
+  { "name": "Fanta Limón", "price": "2,70€" },
+  { "name": "Nestea", "price": "2,70€" },
+  { "name": "Agua (50cl)", "price": "1,90€" },
+  { "name": "Agua con gas (50cl)", "price": "2,20€" },
+  { "name": "Tónica", "price": "2,70€" }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Sweety Santa",
+    "price": "13,90 €",
+    "description": "Brioche rojo artesanal, mayonesa de trufa, smash fino con gouda fundido, mermelada de bacon y cebolla pochada. Doble capa y garrapiñado picado.",
+    "image": "/images/SWEETSANTA.jpeg",
+    "emoji": "🎅🏻",
+    "color": "text-red-600"
+  },
+  {
+    "name": "Ginger Grinch",
+    "price": "13,90 €",
+    "description": "Brioche verde artesanal, mayo japonesa, pollo crujiente, cheddar y Monterey Jack, bacon ahumado, cebolla caramelizada y Lotus picado por encima",
+    "image": "/images/GINGERGRINCH.jpeg",
+    "emoji": "🎄",
+    "color": "text-green-600"
+  }
+]

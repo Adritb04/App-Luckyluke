@@ -1,0 +1,49 @@
+---
+// Menu Item Component
+interface Props {
+	name: string;
+	price: string;
+	description: string;
+	allergens?: string[];
+	showAllergens?: boolean;
+}
+
+const { name, price, description, allergens = [], showAllergens = false } = Astro.props;
+
+const allergenColors: Record<string, string> = {
+	'Gluten': 'bg-red-700',
+	'Huevo': 'bg-yellow-700',
+	'Lácteos': 'bg-green-600',
+	'Soja': 'bg-blue-600',
+	'Sésamo': 'bg-stone-700',
+	'Sulfitos': 'bg-gray-600',
+	'Mostaza': 'bg-amber-600',
+	'Apio': 'bg-lime-700',
+	'Cacahuetes': 'bg-orange-700',
+	'Frutos secos': 'bg-orange-600',
+};
+---
+
+<!-- Touch target: min 48px height with p-5 mobile / p-6 desktop -->
+<div class="border-western bg-black/40 hover:bg-gray-900 transition duration-300 p-5 md:p-6 cursor-pointer min-h-[120px]">
+	<!-- Spacing: mb-3 (12px) entre título y descripción -->
+	<div class="flex justify-between items-start mb-3 gap-4">
+		<h3 class="font-burford text-xl md:text-2xl text-red-600 leading-tight">{name}</h3>
+		<span class="font-burford text-lg md:text-xl whitespace-nowrap">{price}</span>
+	</div>
+	
+	<!-- Line height mejorado para legibilidad -->
+	<p class="font-bratton text-sm md:text-base text-gray-300 leading-relaxed">{description}</p>
+	
+	{allergens.length > 0 && (
+		<!-- Spacing: mt-4 (16px) separación de alérgenos, gap-2 (8px) entre chips -->
+		<div class={`mt-4 flex flex-wrap gap-2 ${!showAllergens ? 'hidden' : ''}`}>
+			{allergens.map(allergen => (
+				<!-- Touch friendly: px-3 py-1.5 para mejor toque -->
+				<span class={`${allergenColors[allergen] || 'bg-gray-600'} text-white text-xs px-3 py-1.5 rounded`}>
+					{allergen}
+				</span>
+			))}
+		</div>
+	)}
+</div>

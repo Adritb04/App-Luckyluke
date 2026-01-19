@@ -1,0 +1,47 @@
+---
+// Navigation component
+---
+
+<nav class="bg-black fixed top-0 left-0 w-full z-50 border-b border-red-600" transition:persist>
+	<div class="container mx-auto px-4 py-3 flex justify-center items-center">
+		<!-- Logo -->
+		<div class="flex items-center">
+			<img 
+				src="https://huggingface.co/spaces/restauranteluckyluke/restauranteluckyluke/resolve/main/images/Lucky_Horizontal_Principal%20negativo.png"
+				alt="Lucky Luke Logo" 
+				class="h-20"
+			/>
+		</div>
+	</div>
+	
+	<!-- Mobile Menu (hidden by default) -->
+	<div id="mobileMenu" class="hidden md:hidden bg-black border-t border-red-600">
+		<a href="/index" class="block px-4 py-2 text-white hover:text-red-600 font-burford">
+			Inicio
+		</a>
+		<a href="/carta" class="block px-4 py-2 text-red-600 font-burford">
+			Carta
+		</a>
+		<a href="/reservas" class="block px-4 py-2 text-white hover:text-red-600 font-burford">
+			Reservas
+		</a>
+		<a href="/eventos" class="block px-4 py-2 text-white hover:text-red-600 font-burford">
+			Eventos
+		</a>
+		<a href="/contacto" class="block px-4 py-2 text-red-600 font-burford">
+			Contacto
+		</a>
+	</div>
+</nav>
+
+<script>
+	// Mobile menu toggle logic can be added here if needed
+	const menuToggle = document.querySelector('[data-menu-toggle]');
+	const mobileMenu = document.getElementById('mobileMenu');
+	
+	if (menuToggle && mobileMenu) {
+		menuToggle.addEventListener('click', () => {
+			mobileMenu.classList.toggle('hidden');
+		});
+	}
+</script>
