@@ -2,39 +2,52 @@
   {
     "id": "fusionbites",
     "title": "FUSION BITES",
-    "items": [
+   "available": true,
+  "items": [
       {
         "name": "BALL BITE COSTILLA BBQ",
+        "featured": false,
+        "image": "/images/seccion/plato.webp",
         "price": "11,90€",
         "description": "Croquetas de costilla a la BBQ cocinada a baja temperatura.",
         "allergens": ["Gluten", "Huevo", "Lácteos", "Sulfitos"]
       },
       {
         "name": "BALL BITE ATÚN ROJO",
+        "featured": false,
+        "image": "/images/seccion/plato.webp",
         "price": "11,90€",
         "description": "Croquetas de Atún Rojo con Wakame.",
         "allergens": ["Gluten", "Huevo", "Lácteos", "Pescado"]
       },
       {
         "name": "GYOZAS BUEY",
+        "featured": false,
+        "image": "/images/seccion/plato.webp",
         "price": "11,90€",
         "description": "Gyozas de buey a la brasa.",
         "allergens": ["Gluten", "Soja", "Sésamo"]
       },
       {
         "name": "GYOZAS PRESA IBÉRICA",
+        "featured": false,
+        "image": "/images/seccion/plato.webp",
         "price": "11,90€",
         "description": "Gyozas de presa ibérica.",
         "allergens": ["Gluten", "Soja", "Sésamo"]
       },
       {
         "name": "PAN BAO MEX FUSION",
+        "featured": false,
+        "image": "/images/seccion/plato.webp",
         "price": "11,90€",
         "description": "3 baos crujientes: carne al pastor, tinga poblana y cochinita pibil.",
         "allergens": ["Gluten", "Huevo", "Soja", "Sésamo"]
       },
       {
         "name": "PAN BAO SPAIN",
+        "featured": false,
+        "image": "/images/seccion/plato.webp",
         "price": "11,90€",
         "description": "3 baos crujientes: rabo de toro a la cordobesa, carrillada al vino tinto y solomillo al Pedro Ximénez.",
         "allergens": ["Gluten", "Huevo", "Soja", "Sésamo", "Sulfitos"]
@@ -44,33 +57,44 @@
   {
     "id": "patatas",
     "title": "PATATAS",
-    "items": [
+   "available": true,
+  "items": [
       {
         "name": "Rancheras",
+        "featured": false,
+        "image": "/images/seccion/plato.webp",
         "price": "12,90€",
         "description": "Mezcla de quesos, bacon crispy y salsa ranchera.",
         "allergens": ["Huevo", "Lácteos", "Sulfitos", "Soja"]
       },
       {
         "name": "Baconeras",
+        "featured": false,
+        "image": "/images/seccion/plato.webp",
         "price": "12,90€",
         "description": "Mezcla de quesos, bacon y salsa del Tío Sam (mahonesa de bacon).",
         "allergens": ["Huevo", "Lácteos", "Sulfitos", "Soja", "Mostaza"]
       },
       {
         "name": "Luisiana",
+        "featured": false,
+        "image": "/images/seccion/plato.webp",
         "price": "12,90€",
         "description": "Mezcla de quesos, pollo a la parrilla y salsa miel y mostaza.",
         "allergens": ["Huevo", "Lácteos", "Sulfitos", "Soja", "Mostaza", "Gluten", "Apio"]
       },
       {
         "name": "JUMPERS FRIES",
+        "featured": false,
+        "image": "/images/seccion/plato.webp",
         "price": "12,90€",
         "description": "Patatas con mezcla de quesos, salsa Jumpers y pulled pork.",
         "allergens": ["Huevo", "Lácteos", "Sulfitos", "Apio"]
       },
       {
         "name": "MAC & CHEESE FRIES",
+        "featured": false,
+        "image": "/images/seccion/plato.webp",
         "price": "12,90€",
         "description": "Patatas con mezcla de quesos, Mac & Cheese y bacon crujiente.",
         "allergens": ["Huevo", "Lácteos", "Sulfitos", "Mostaza", "Gluten"]
@@ -80,21 +104,28 @@
   {
     "id": "nachos",
     "title": "NACHOS",
-    "items": [
+   "available": true,
+  "items": [
       {
         "name": "Nachos Aztecas",
+        "featured": false,
+        "image": "/images/seccion/plato.webp",
         "price": "12,90€",
         "description": "Salsa pico de gallo, tinga de pollo, guacamole y salsa crema de queso.",
         "allergens": ["Lácteos", "Sulfitos", "Gluten", "Soja", "Mostaza", "Cacahuetes"]
       },
       {
         "name": "Nachos del Pastor",
+        "featured": false,
+        "image": "/images/seccion/plato.webp",
         "price": "12,90€",
         "description": "Salsa pico de gallo, mezcla de quesos, cebolla morada, carne guisada al pastor y guacamole casero.",
         "allergens": ["Lácteos", "Sulfitos", "Gluten", "Soja", "Mostaza", "Cacahuetes"]
       },
       {
         "name": "Nachos Tío Jack",
+        "featured": false,
+        "image": "/images/seccion/plato.webp",
         "price": "12,90€",
         "description": "Salsa Jack Daniel's BBQ, mezcla de quesos y pulled pork.",
         "allergens": ["Gluten", "Lácteos", "Sulfitos", "Soja", "Mostaza"]
@@ -104,21 +135,28 @@
   {
     "id": "ensaladas",
     "title": "ENSALADAS",
-    "items": [
+   "available": true,
+  "items": [
       {
         "name": "California",
+        "featured": false,
+        "image": "/images/seccion/plato.webp",
         "price": "10,90€",
         "description": "Mezclum de lechugas, tomate cherry, parmesano, croutons, pollo empanado y a la parrilla, bacon crispy y salsa miel y mostaza.",
         "allergens": ["Gluten", "Huevo", "Soja", "Lácteos", "Mostaza", "Sulfitos", "Sésamo"]
       },
       {
         "name": "Mimosa",
+        "featured": false,
+        "image": "/images/seccion/plato.webp",
         "price": "10,90€",
         "description": "Mezclum de lechugas, tomate cherry, rulo de cabra, mix de frutos secos y miel.",
         "allergens": ["Lácteos", "Sulfitos", "Frutos secos"]
       },
       {
         "name": "Mexicana",
+        "featured": false,
+        "image": "/images/seccion/plato.webp",
         "price": "10,90€",
         "description": "Mezclum de lechugas, tomate cherry, cebolla morada, maíz, nachos, pollo a la parrilla y salsa pico de gallo.",
         "allergens": ["Gluten", "Huevo", "Soja", "Lácteos", "Sulfitos", "Apio"]

@@ -2,7 +2,8 @@
   {
     "id": "bocatas",
     "title": "BOCATAS GOURMET",
-    "items": [
+   "available": true,
+  "items": [
       {
         "name": "DON SOLOMILLÓN",
         "featured": false,
@@ -75,7 +76,8 @@
       ]
     },
     "subtitle": "TOP BURGERS",
-    "items": [
+   "available": true,
+  "items": [
       {
         "name": "RIBS BURGER",
         "featured": true,
@@ -187,7 +189,8 @@
     "id": "carnes",
     "title": "CARNES",
     "description": "Hechas a la parrilla y al ahumador como mandan los cánones. Elige tu locura favorita.",
-    "items": [
+   "available": true,
+  "items": [
       {
         "name": "Alitas de Pollo Fritas",
         "featured": false,
@@ -277,7 +280,8 @@
     "id": "mexicano",
     "title": "MEXICANO",
     "description": "Platos de la cocina mexicana y sureña de EE. UU., seleccionados para el disfrute de los sentidos.",
-    "items": [
+   "available": true,
+  "items": [
       {
         "name": "Chimichanga",
         "featured": false,

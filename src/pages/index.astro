@@ -9,151 +9,128 @@ import FeaturedCard from '../components/FeaturedCard.astro';
 import featuredBurgersData from '../data/featured-burgers.json';
 import menuSectionsData from '../data/menu-sections.json';
 
-interface MenuItem {
+interface MenuItemData {
 	name: string;
 	price: string;
 	description: string;
 	allergens?: string[];
 	badge?: string;
+
+	// nuevos (opcionales)
+	available?: boolean;
+	featured?: boolean;
+	image?: string;
+	emoji?: string;
+	color?: string;
 }
 
 interface Section {
 	id: string;
 	title: string;
 	description?: string;
+	available?: boolean;
 	allergenNotice?: {
 		text: string;
 		allergens: string[];
 	};
 	subtitle?: string;
-	items: MenuItem[];
+	items: MenuItemData[];
 }
 
 const sections: Section[] = [
-  ...(featuredBurgersData as Section[]),
-  ...(menuSectionsData as Section[])
+	...(featuredBurgersData as Section[]),
+	...(menuSectionsData as Section[])
 ];
 ---
 
 <Layout title="Principales - Lucky Luke">
 	<Navigation />
 	<Sidebar />
-	
-	<!-- Spacing: pt-28 mobile (112px) navbar, px-5 mobile (20px) óptimo para tocar, pb-28 bottom nav -->
+
 	<main class="pt-28 md:pt-32 px-5 md:px-6 pb-28 md:pb-24 lg:pl-64">
-		<!-- Spacing: py-12 mobile (48px), py-16 desktop (64px) -->
 		<section class="py-12 md:py-16 bg-black">
-			<!-- Max width: max-w-7xl para desktop -->
 			<div class="container mx-auto max-w-7xl">
-				
-				<!-- Burgers de Navidad - Spacing: mb-16 mobile (64px), mb-20 desktop (80px) -->
-				<!-- <div id="navidad" class="mb-16 md:mb-20">
-				
-					<div class="flex items-center mb-10">
-						<div class="flex-1 h-px bg-gray-700"></div>
-						
-						<h2 class="font-burford text-3xl md:text-4xl mx-4 text-red-600 text-center">BURGERS DE NAVIDAD</h2>
-						<div class="flex-1 h-px bg-gray-700"></div>
-					</div>
-					
-					
-					<div class="grid grid-cols-2 gap-4 md:gap-6">
-						{featuredBurgers.map(burger => (
-							<FeaturedCard 
-								name={burger.name}
-								price={burger.price}
-								description={burger.description}
-								image={burger.image}
-								emoji={burger.emoji}
-								color={burger.color}
-							/>
-						))}
-					</div>
-				</div> -->
 
-				{sections.map(section => (
-					<MenuSection 
-						id={section.id}
-						title={section.title}
-						description={section.description}
-					>
-						{section.allergenNotice && (
-							<div class="col-span-full mb-4">
-								<p class="font-bratton text-sm text-gray-400 text-center mb-3">
-									{section.allergenNotice.text}
-								</p>
-								<div class="flex flex-wrap justify-center gap-2">
-									{section.allergenNotice.allergens.map(allergen => (
-										<span class={`text-white text-xs px-2 py-1 rounded ${
-											allergen === 'Gluten' ? 'bg-red-700' :
-											allergen === 'Huevo' ? 'bg-yellow-700' :
-											allergen === 'Lácteos' ? 'bg-green-600' :
-											allergen === 'Soja' ? 'bg-blue-600' :
-											allergen === 'Sésamo' ? 'bg-stone-700' :
-											allergen === 'Sulfitos' ? 'bg-gray-600' :
-											allergen === 'Mostaza' ? 'bg-amber-600' :
-											'bg-gray-500'
-										}`}>{allergen}</span>
-									))}
+				{sections
+					.filter((section: any) => section.available !== false)
+					.map(section => (
+						<MenuSection
+							id={section.id}
+							title={section.title}
+							description={section.description}
+						>
+							{section.allergenNotice && (
+								<div class="col-span-full mb-4">
+									<p class="font-bratton text-sm text-gray-400 text-center mb-3">
+										{section.allergenNotice.text}
+									</p>
+									<div class="flex flex-wrap justify-center gap-2">
+										{section.allergenNotice.allergens.map(allergen => (
+											<span class={`text-white text-xs px-2 py-1 rounded ${
+												allergen === 'Gluten' ? 'bg-red-700' :
+												allergen === 'Huevo' ? 'bg-yellow-700' :
+												allergen === 'Lácteos' ? 'bg-green-600' :
+												allergen === 'Soja' ? 'bg-blue-600' :
+												allergen === 'Sésamo' ? 'bg-stone-700' :
+												allergen === 'Sulfitos' ? 'bg-gray-600' :
+												allergen === 'Mostaza' ? 'bg-amber-600' :
+												'bg-gray-500'
+											}`}>{allergen}</span>
+										))}
+									</div>
 								</div>
-							</div>
-						)}
-						
-						{section.subtitle && (
-							<div class="col-span-full mt-10 mb-6">
-								<div class="flex items-center">
-									<div class="flex-1 h-px bg-gray-800"></div>
-									<h3 class="font-burford text-3xl mx-4 text-red-600 text-center">{section.subtitle}</h3>
-									<div class="flex-1 h-px bg-gray-800"></div>
+							)}
+
+							{section.subtitle && (
+								<div class="col-span-full mt-10 mb-6">
+									<div class="flex items-center">
+										<div class="flex-1 h-px bg-gray-800"></div>
+										<h3 class="font-burford text-3xl mx-4 text-red-600 text-center">{section.subtitle}</h3>
+										<div class="flex-1 h-px bg-gray-800"></div>
+									</div>
 								</div>
-							</div>
-						)}
-						
-						{(() => {
-  const featuredItems = section.items.filter(
-    (item: any) => item.featured === true && item.image
-  );
+							)}
 
-  const regularItems = section.items.filter(
-    (item: any) => !(item.featured === true && item.image)
-  );
+							{(() => {
+								const visibleItems = (section.items || []).filter((item: any) => item.available !== false);
 
-  return (
-    <>
-      {featuredItems.length > 0 && (
-        <div class="grid grid-cols-2 gap-4 md:gap-6 mb-8">
-          {featuredItems.map((item: any) => (
-            <FeaturedCard
-              name={item.name}
-              price={item.price}
-              description={item.description}
-              image={item.image}
-              emoji={item.emoji}
-              color={item.color}
-            />
-          ))}
-        </div>
-      )}
+								const featuredItems = visibleItems.filter((item: any) => item.featured === true && item.image);
+								const regularItems = visibleItems.filter((item: any) => !(item.featured === true && item.image));
 
-      {regularItems.map((item: any) => (
-        <MenuItem
-          name={item.name}
-          price={item.price}
-          description={item.description}
-          allergens={item.allergens || []}
-        />
-      ))}
-    </>
-  );
-})()}
+								return (
+									<>
+										{featuredItems.length > 0 && (
+											/* MANTENEMOS TU DISEÑO ORIGINAL */
+											<div class="grid grid-cols-2 gap-4 md:gap-6 mb-8">
+												{featuredItems.map((item: any) => (
+													<FeaturedCard
+														name={item.name}
+														price={item.price}
+														description={item.description}
+														image={item.image}
+														emoji={item.emoji}
+														color={item.color}
+													/>
+												))}
+											</div>
+										)}
 
-
-					</MenuSection>
-				))}
-				
+										{regularItems.map((item: any) => (
+											<MenuItem
+												name={item.name}
+												price={item.price}
+												description={item.description}
+												allergens={item.allergens || []}
+											/>
+										))}
+									</>
+								);
+							})()}
+						</MenuSection>
+					))}
 			</div>
 		</section>
 	</main>
-	
+
 	<BottomNavigation />
 </Layout>

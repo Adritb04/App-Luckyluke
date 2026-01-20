@@ -2,69 +2,92 @@
   {
     "id": "postres",
     "title": "POSTRES",
-    "items": [
+   "available": true,
+  "items": [
       {
         "name": "Tarta Happy Hippo",
+        "featured": false,
+        "image": "/images/seccion/plato.webp",
         "price": "6,90€",
         "description": "Capas de crema de avellana y chocolate inspiradas en el mítico snack Happy Hippo.",
         "allergens": ["Gluten", "Lácteos", "Huevo", "Frutos secos"]
       },
       {
         "name": "Tarta de Natillas",
+        "featured": false,
+        "image": "/images/seccion/plato.webp",
         "price": "6,90€",
         "description": "Cremosa tarta de natillas al estilo casero, con base de galleta tradicional.",
         "allergens": ["Gluten", "Lácteos", "Huevo"]
       },
       {
         "name": "Tarta Lotus",
+        "featured": false,
+        "image": "/images/seccion/plato.webp",
         "price": "6,90€",
         "description": "Cremosa mezcla de galleta Lotus y caramelo con una textura suave y dulce irresistible.",
         "allergens": ["Gluten", "Lácteos", "Huevo", "Sulfitos"]
       },
       {
         "name": "Tarta de Arroz con Leche",
+        "featured": false,
+        "image": "/images/seccion/plato.webp",
         "price": "6,90€",
         "description": "Sabor tradicional asturiano convertido en tarta: cremosa, aromática y con toque de canela.",
         "allergens": ["Gluten", "Lácteos"]
       },
       {
         "name": "Tarta de Turrón Blando",
+        "featured": false,
+        "image": "/images/seccion/plato.webp",
         "price": "6,90€",
         "description": "Tarta suave y cremosa elaborada con turrón de Jijona. Dulce, navideña y muy adictiva.",
         "allergens": ["Gluten", "Lácteos", "Huevo", "Frutos secos"]
       },
       {
         "name": "Tarta Oreo",
+        "featured": false,
+        "image": "/images/seccion/plato.webp",
         "price": "6,90€",
         "description": "Base crujiente de Oreo con crema suave y chocolate. Un clásico irresistible.",
         "allergens": ["Gluten", "Lácteos", "Huevo", "Soja"]
       },
       {
         "name": "Tarta Pantera Rosa",
+        "featured": false,
+        "image": "/images/seccion/plato.webp",
         "price": "6,90€",
         "description": "Cremosa, esponjosa y con el icónico sabor del pastelito Pantera Rosa.",
         "allergens": ["Gluten", "Lácteos", "Huevo"]
       },
       {
         "name": "Tarta Suchard",
+        "featured": false,
+        "image": "/images/seccion/plato.webp",
         "price": "6,90€",
         "description": "Tarta inspirada en el famoso turrón Suchard, con chocolate crujiente y textura cremosa.",
         "allergens": ["Gluten", "Lácteos", "Huevo", "Frutos secos"]
       },
       {
         "name": "Tarta Ferrero",
+        "featured": false,
+        "image": "/images/seccion/plato.webp",
         "price": "6,90€",
         "description": "Inspirada en Ferrero Rocher: crema de avellana, cacao y crujiente delicioso.",
         "allergens": ["Gluten", "Lácteos", "Huevo", "Frutos secos"]
       },
       {
         "name": "Tarta Phoskitos",
+        "featured": false,
+        "image": "/images/seccion/plato.webp",
         "price": "6,90€",
         "description": "Cremosa tarta de queso inspirada en el clásico bizcocho con nata Phoskitos.",
         "allergens": ["Gluten", "Lácteos", "Huevo"]
       },
       {
         "name": "Tarta de Queso Manchega",
+        "featured": false,
+        "image": "/images/seccion/plato.webp",
         "price": "6,90€",
         "description": "Cheesecake elaborada con queso manchego, sabor potente y textura suave. Un toque muy nuestro.",
         "allergens": ["Gluten", "Lácteos", "Huevo"]
