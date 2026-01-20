@@ -80,21 +80,21 @@
   "items": [
       {
         "name": "RIBS BURGER",
-        "featured": true,
+        "featured": false,
         "image": "/images/seccion/plato.webp",
         "price": "13,90€",
         "description": "De costillas de cerdo a la BBQ a baja temperatura, coleslaw americana, delicioso Mac&Cheese y aros de cebolla."
       },
       {
         "name": "Bolw's Burger",
-        "featured": true,
+        "featured": false,
         "image": "/images/seccion/plato.webp",
         "price": "14,90€",
         "description": "Cheese&Bacon empanada y frita dentro de un bowl de queso fundido."
       },
       {
         "name": "Sweet Candy",
-        "featured": true,
+        "featured": false,
         "image": "/images/seccion/plato.webp",
         "price": "13,90€",
         "description": "Pan de Croissant, doble smash, queso Jack, mermelada de bacon y Mayo Japonesa."

@@ -2,7 +2,7 @@
   {
     "id": "navidad",
     "title": "BURGERS DE NAVIDAD",
-     "available": true,
+     "available": false,
   "items": [
       {
         "name": "Sweety Santa",
