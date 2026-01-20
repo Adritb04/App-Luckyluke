@@ -10,12 +10,12 @@
   "theme_color": "#dc2626",
   "icons": [
     {
-      "src": "public/images/logos/192logo.png",
+      "src": "/images/logos/192logo.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "public/images/logos/512logo.png",
+      "src": "/images/logos/512logo.png",
       "sizes": "512x512",
       "type": "image/png"
     }
