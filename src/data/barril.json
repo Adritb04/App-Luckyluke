@@ -15,10 +15,27 @@
     { "label": "50cl", "price": "6,50€" }
   ]
 },
+  {
+  "name": "Mc Chouffe",
+  "available": true,
+  "image": "/images/barril/mcchouffe.webp",
+  "style": "Belgian Strong Dark Ale",
+  "country": "Bélgica",
+  "color": "Marrón oscuro",
+  "abv": 8.5,
+  "ibu": 20,
+  "pairing": "Carnes asadas, estofados, quesos curados, platos contundentes",
+  "description": "Cerveza belga oscura de carácter maltoso, con notas de caramelo, fruta madura y un ligero toque especiado. Potente pero equilibrada, ideal para acompañar platos intensos.",
+  "prices": [
+    { "label": "33cl", "price": "4,50€" },
+    { "label": "50cl", "price": "6,50€" }
+  ]
+},
+
 {
   "name": "Gulden Draak Classic",
   "available": true,
-  "image": "/images/barril/gulden.webp",
+  "image": "images/barril/gulden.webp",
   "style": "Belgian Dark Strong Ale",
   "country": "Bélgica",
   "color": "Tostada oscura",
@@ -52,7 +69,7 @@
   },
   {
     "name": "IJ IPA",
-    "available": true,
+    "available": false,
     "image": "/images/barril/ij-ipa.jpg",
     "style": "IPA",
     "country": "Países Bajos",
@@ -210,7 +227,7 @@
   },
   {
     "name": "Maredsous",
-    "available": true,
+    "available": false,
     "image": "/images/barril/maredsous.jpg",
     "style": "Abbey Beer",
     "country": "Bélgica",
@@ -255,5 +272,38 @@
       { "label": "33cl", "price": "4,50€" },
       { "label": "50cl", "price": "6,50€" }
     ]
+  },
+  {
+  "name": "Chouffe Houblon",
+  "available": true,
+  "image": "/images/barril/houblon.webp",
+  "style": "Belgian IPA",
+  "country": "Bélgica",
+  "color": "Rubio dorado",
+  "abv": 9.0,
+  "ibu": 45,
+  "pairing": "Carnes a la parrilla, burgers potentes, quesos curados",
+  "description": "IPA belga potente y aromática, con intenso carácter lupulado, notas cítricas y resinosas equilibradas por una base maltosa belga.",
+  "prices": [
+    { "label": "33cl", "price": "4,50€" },
+    { "label": "50cl", "price": "6,50€" }
+  ]
+  },
+  {
+  "name": "Delirium Tremens",
+  "available": true,
+  "image": "/images/barril/delirium.webp",
+  "style": "Belgian Strong Golden Ale",
+  "country": "Bélgica",
+  "color": "Rubio pálido",
+  "abv": 8.5,
+  "ibu": 26,
+  "pairing": "Carnes blancas, mariscos, quesos semicurados",
+  "description": "Clásica cerveza belga de alta graduación, afrutada y especiada, con final seco, elegante y un punto alcohólico bien integrado.",
+  "prices": [
+    { "label": "33cl", "price": "4,50€" },
+    { "label": "50cl", "price": "6,50€" }
+  ]
   }
+  
 ]
