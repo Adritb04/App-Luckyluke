@@ -109,29 +109,44 @@ const sections: Section[] = [
 							</div>
 						)}
 						
-						{section.id === 'navidad' ? (
-  <div class="grid grid-cols-2 gap-4 md:gap-6">
-    {section.items.map(item => (
-      <FeaturedCard
-        name={item.name}
-        price={item.price}
-        description={item.description}
-        image={item.image}
-        emoji={item.emoji}
-        color={item.color}
-      />
-    ))}
-  </div>
-) : (
-  section.items.map(item => (
-    <MenuItem 
-      name={item.name}
-      price={item.price}
-      description={item.description}
-      allergens={item.allergens || []}
-    />
-  ))
-)}
+						{(() => {
+  const featuredItems = section.items.filter(
+    (item: any) => item.featured === true && item.image
+  );
+
+  const regularItems = section.items.filter(
+    (item: any) => !(item.featured === true && item.image)
+  );
+
+  return (
+    <>
+      {featuredItems.length > 0 && (
+        <div class="grid grid-cols-2 gap-4 md:gap-6 mb-8">
+          {featuredItems.map((item: any) => (
+            <FeaturedCard
+              name={item.name}
+              price={item.price}
+              description={item.description}
+              image={item.image}
+              emoji={item.emoji}
+              color={item.color}
+            />
+          ))}
+        </div>
+      )}
+
+      {regularItems.map((item: any) => (
+        <MenuItem
+          name={item.name}
+          price={item.price}
+          description={item.description}
+          allergens={item.allergens || []}
+        />
+      ))}
+    </>
+  );
+})()}
+
 
 					</MenuSection>
 				))}

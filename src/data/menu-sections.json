@@ -163,7 +163,7 @@
       {
         "name": "Chicken Ranch Kentucky",
         "featured": true,
-        "image": "public/images/comida/platos/burgers/chicken ranch.PNG",
+        "image": "/images/comida/platos/burgers/chicken-ranch.png",
         "price": "12,90€",
         "description": "Pollo frito Kentucky crujiente con queso monterrey Jack, bacon ahumado, salsa ranchera, jalapeños rellenos de queso, mezclum, tomate y cebolla."
       },
