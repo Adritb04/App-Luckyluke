@@ -47,7 +47,7 @@
       {
         "name": "TEJANO",
         "featured": true,
-        "image": "/images/comida/platos/bocatas/Tejano.png",
+        "image": "/images/comida/platos/bocatas/Tejano.webp",
         "price": "13,90€",
         "description": "De entrecot de ternera a la brasa, con huevos fritos, bacon laqueado en sirope de arce y queso monterrey jack.",
         "allergens": [
