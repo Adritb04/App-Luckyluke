@@ -178,8 +178,8 @@
       },
       {
         "name": "Smash Tower",
-        "featured": false,
-        "image": "/images/seccion/plato.webp",
+        "featured": true,
+        "image": "public/images/comida/platos/burgers/smash.png.PNG",
         "price": "17,90€",
         "description": "400g de ternera premium smasheada en 4 capas con cebolla, queso cheddar, bacon, pepinillos y salsa Smash Tower."
       }
