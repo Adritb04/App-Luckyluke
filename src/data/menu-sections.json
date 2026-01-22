@@ -165,7 +165,7 @@
       {
         "name": "Chicken Ranch Kentucky",
         "featured": true,
-        "image": "/images/comida/platos/burgers/chicken-ranch.png",
+        "image": "/images/comida/platos/burgers/chicken-ranch.webp",
         "price": "12,90€",
         "description": "Pollo frito Kentucky crujiente con queso monterrey Jack, bacon ahumado, salsa ranchera, jalapeños rellenos de queso, mezclum, tomate y cebolla."
       },
@@ -179,7 +179,7 @@
       {
         "name": "Smash Tower",
         "featured": true,
-        "image": "public/images/comida/platos/burgers/smash.png.PNG",
+        "image": "public/images/comida/platos/burgers/smashtower.webp",
         "price": "17,90€",
         "description": "400g de ternera premium smasheada en 4 capas con cebolla, queso cheddar, bacon, pepinillos y salsa Smash Tower."
       }
