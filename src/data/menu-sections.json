@@ -20,7 +20,7 @@
       {
         "name": "EL KOREANO",
         "featured": true,
-        "image": "public/images/comida/platos/bocatas/koreano.png",
+        "image": "/images/comida/platos/bocatas/koreano.png",
         "price": "13,90€",
         "description": "De pollo coreano crujiente, coleslaw de kimchi, escamas de parmesano y mayo japonesa.",
         "allergens": [
@@ -47,7 +47,7 @@
       {
         "name": "TEJANO",
         "featured": true,
-        "image": "public/images/comida/platos/bocatas/Tejano.png",
+        "image": "/images/comida/platos/bocatas/Tejano.png",
         "price": "13,90€",
         "description": "De entrecot de ternera a la brasa, con huevos fritos, bacon laqueado en sirope de arce y queso monterrey jack.",
         "allergens": [
@@ -179,7 +179,7 @@
       {
         "name": "Smash Tower",
         "featured": true,
-        "image": "public/images/comida/platos/burgers/smashtower.webp",
+        "image": "/images/comida/platos/burgers/smashtower.webp",
         "price": "17,90€",
         "description": "400g de ternera premium smasheada en 4 capas con cebolla, queso cheddar, bacon, pepinillos y salsa Smash Tower."
       }
