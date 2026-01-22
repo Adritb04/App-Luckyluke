@@ -6,24 +6,24 @@
   "items": [
       {
         "name": "BALL BITE COSTILLA BBQ",
-        "featured": false,
-        "image": "/images/seccion/plato.webp",
+        "featured": true,
+        "image": "public/images/comida/platos/fusion bites/ballbites.png",
         "price": "11,90€",
         "description": "Croquetas de costilla a la BBQ cocinada a baja temperatura.",
         "allergens": ["Gluten", "Huevo", "Lácteos", "Sulfitos"]
       },
       {
         "name": "BALL BITE ATÚN ROJO",
-        "featured": false,
-        "image": "/images/seccion/plato.webp",
+        "featured": true,
+        "image": "public/images/comida/platos/fusion bites/ballbites.png",
         "price": "11,90€",
         "description": "Croquetas de Atún Rojo con Wakame.",
         "allergens": ["Gluten", "Huevo", "Lácteos", "Pescado"]
       },
       {
         "name": "GYOZAS BUEY",
-        "featured": false,
-        "image": "/images/seccion/plato.webp",
+        "featured": true,
+        "image": "public/images/comida/platos/fusion bites/gyozabuey.png",
         "price": "11,90€",
         "description": "Gyozas de buey a la brasa.",
         "allergens": ["Gluten", "Soja", "Sésamo"]
@@ -38,16 +38,16 @@
       },
       {
         "name": "PAN BAO MEX FUSION",
-        "featured": false,
-        "image": "/images/seccion/plato.webp",
+        "featured": true,
+        "image": "public/images/comida/platos/fusion bites/baomex.png",
         "price": "11,90€",
         "description": "3 baos crujientes: carne al pastor, tinga poblana y cochinita pibil.",
         "allergens": ["Gluten", "Huevo", "Soja", "Sésamo"]
       },
       {
         "name": "PAN BAO SPAIN",
-        "featured": false,
-        "image": "/images/seccion/plato.webp",
+        "featured": true,
+        "image": "public/images/comida/platos/fusion bites/baoesp.png",
         "price": "11,90€",
         "description": "3 baos crujientes: rabo de toro a la cordobesa, carrillada al vino tinto y solomillo al Pedro Ximénez.",
         "allergens": ["Gluten", "Huevo", "Soja", "Sésamo", "Sulfitos"]
@@ -61,8 +61,8 @@
   "items": [
       {
         "name": "Rancheras",
-        "featured": false,
-        "image": "/images/seccion/plato.webp",
+        "featured": true,
+        "image": "public/images/comida/platos/patatas/RANCHERAS.png",
         "price": "12,90€",
         "description": "Mezcla de quesos, bacon crispy y salsa ranchera.",
         "allergens": ["Huevo", "Lácteos", "Sulfitos", "Soja"]
